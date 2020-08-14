@@ -4,11 +4,13 @@ import java.time.LocalDate;
 import java.util.List;
 import solution.model.Query;
 import solution.model.TimeLine;
+import solution.services.AnalyzeService;
 import static solution.utils.Constants.DASH;
 import static solution.utils.Constants.STAR;
 
-public class AnalyzeService {
+public class AnalyzeServiceImpl implements AnalyzeService {
 
+    @Override
     public String analyze(List<TimeLine> timeLineList, Query query) {
 
         String response;

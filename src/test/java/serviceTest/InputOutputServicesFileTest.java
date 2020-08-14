@@ -2,6 +2,7 @@ package serviceTest;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
@@ -26,7 +27,10 @@ public class InputOutputServicesFileTest {
 
     @Test
     public void write_and_read_file() {
-        List<String> expected = List.of("123", "321");
+        List<String> expected = new ArrayList<>();
+        expected.add("123");
+        expected.add("321");
+
         outputWriterService.write(expected);
         List<String> actual = inputReaderService.getInputData();
         Assert.assertEquals(expected, actual);
