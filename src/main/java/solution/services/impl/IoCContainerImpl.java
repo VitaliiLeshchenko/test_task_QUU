@@ -1,5 +1,6 @@
 package solution.services.impl;
 
+import solution.services.AnalyzeService;
 import solution.services.GeneralParser;
 import solution.services.InputReaderService;
 import solution.services.IoCContainer;
@@ -28,7 +29,7 @@ public class IoCContainerImpl implements IoCContainer {
         queryParser = new QueryParserImpl(queryValidator);
         inputReaderService = new InputReaderServiceTerminal();
         outputWriterService = new OutputWriterServiceTerminal();
-        AnalyzeService analyzeService = new AnalyzeService();
+        AnalyzeService analyzeService = new AnalyzeServiceImpl();
         generalParser = new GeneralParserImpl(timeLineParser, queryParser, analyzeService);
     }
 

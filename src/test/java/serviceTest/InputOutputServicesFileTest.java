@@ -1,7 +1,6 @@
 package serviceTest;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,7 +17,7 @@ public class InputOutputServicesFileTest {
 
     @Before
     public void initialize() {
-        Path testFile = Paths.get("src/main/resources/testFile.txt");
+        String testFile = "src/main/resources/testFile.txt";
         inputReaderService = new InputReaderServiceFile(testFile);
         outputWriterService = new OutputWriterServiceFile(testFile);
     }
@@ -26,8 +25,12 @@ public class InputOutputServicesFileTest {
 
     @Test
     public void write_and_read_file() {
-        List<String> expected = List.of("123", "321");
+        List<String> expected = new ArrayList<>();
+        expected.add("2");
+        expected.add("line1");
+        expected.add("line2");
         outputWriterService.write(expected);
+        expected.remove(0);
         List<String> actual = inputReaderService.getInputData();
         Assert.assertEquals(expected, actual);
     }

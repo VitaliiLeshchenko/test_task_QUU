@@ -5,6 +5,7 @@ import java.util.List;
 import solution.exceptions.CommandValidationException;
 import solution.model.Query;
 import solution.model.TimeLine;
+import solution.services.AnalyzeService;
 import solution.services.GeneralParser;
 import solution.services.QueryParser;
 import solution.services.TimeLineParser;
