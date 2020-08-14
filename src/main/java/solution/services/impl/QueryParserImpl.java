@@ -15,7 +15,6 @@ import static solution.utils.Constants.SPLIT_COMMAND_DATE_INDEX;
 
 public class QueryParserImpl implements QueryParser {
 
-
     private final QueryValidator queryValidator;
 
     public QueryParserImpl(QueryValidator queryValidator) {
