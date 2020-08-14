@@ -8,8 +8,6 @@ import static solution.utils.Constants.MAX_COUNT_OF_ALL_LINES;
 
 public class InputReaderServiceTerminal implements InputReaderService {
 
-
-
     @Override
     public List<String> getInputData() {
         List<String> lines = new ArrayList<>();

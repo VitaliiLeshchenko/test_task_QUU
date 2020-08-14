@@ -14,7 +14,6 @@ public class InputReaderServiceFile implements InputReaderService {
         this.path = path;
     }
 
-
     public List<String> getInputData() {
         List<String> strings = null;
         try {

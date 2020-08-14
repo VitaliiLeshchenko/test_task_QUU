@@ -14,7 +14,6 @@ import static solution.utils.Constants.SPLIT_COMMAND_TIME_INDEX;
 
 public class TimeLineParserImpl implements TimeLineParser {
 
-
     private final TimeLineValidator timeLineValidator;
 
     public TimeLineParserImpl(TimeLineValidator timeLineValidator) {
