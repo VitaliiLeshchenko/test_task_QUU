@@ -2,16 +2,15 @@ package solution.services.impl;
 
 import solution.exceptions.CommandValidationException;
 import solution.services.TimeLineValidator;
+import static solution.utils.Constants.CATEGORY_ID_RANGE_REGEX;
+import static solution.utils.Constants.QUESTION_ID_RANGE_REGEX;
+import static solution.utils.Constants.SERVICE_ID_RANGE_REGEX;
+import static solution.utils.Constants.SUB_CATEGORY_ID_RANGE_REGEX;
+import static solution.utils.Constants.VARIATION_ID_RANGE_REGEX;
 
 public class TimeLineValidatorImpl implements TimeLineValidator {
 
     public static final String SIGN_THAT_SEPARATES_SERVICE_AND_VARIATION = "\\.";
-
-    public static final String SERVICE_ID_RANGE_REGEX = "[1-9]|10";
-    public static final String VARIATION_ID_RANGE_REGEX = "[1-3]";
-    public static final String QUESTION_ID_RANGE_REGEX = "[1-9]|10";
-    public static final String CATEGORY_ID_RANGE_REGEX = "^([1]?\\d|20)$";
-    public static final String SUB_CATEGORY_ID_RANGE_REGEX = "[1-5]";
 
     public static final int SERVICE_TYPE_2_ARGUMENTS = 2;
     public static final int SERVICE_ID_INDEX = 0;
