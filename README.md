@@ -35,6 +35,6 @@ Because all records stored in List<TimeLine>.
 Another is a CommandValidationException.  
 If you will write wrong command, you will have an exception and program will crash.
 
-###To run the application:
+### To run the application:
 1. Download the project
 2. Run Main.main();
